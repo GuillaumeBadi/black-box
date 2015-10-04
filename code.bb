@@ -1,3 +1,2 @@
 
-(with (a 1)
-  ((console.log a)))
+(console.log (if 1 (+ 1 1) 'non non'))
