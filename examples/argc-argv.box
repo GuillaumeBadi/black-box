@@ -1,2 +1,2 @@
-(do (def args () (with (yargs (require 'yargs')) (quote yargs.argv._.length yargs.argv._)))
-    (console.log (args)))
+(do (def argv (key) (if key process.argv[key] process.argv))
+    (console.log (argv)))
