@@ -3,7 +3,7 @@
 
   (def println (line) (console.log line))
 
-  (def method (c name) c['prototype'][name].call)
+  (def method (c name) c.prototype[name].call)
 
   (def cons (e list) (do
     ((method Array unshift) list e)
