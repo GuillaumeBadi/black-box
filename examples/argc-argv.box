@@ -1,2 +1,12 @@
-(do (def argv (key) (if key process.argv[key] process.argv))
-    (console.log (argv)))
+(do
+  (def argv (key) (if key process.argv[key] process.argv))
+
+  (def println (line) (console.log line))
+
+  (def method (c name) c['prototype'][name].call)
+
+  (def cons (e list) (do
+    ((method Array unshift) list e)
+    (return list)))
+
+  (box argv println method cons))
