@@ -1,7 +1,10 @@
 (function () {
-      function factorial(n) {
-    return ((n) ? ((n) * (factorial((n) - (1)))) : (1));
+      function argv(key) {
+    return ((key) ? (process.argv[key]) : (process.argv));
   };
-console.log(factorial((1) + (2)));
+function println(line) {
+    return console.log(line);
+  };
+println(argv(1));
 
   })()
